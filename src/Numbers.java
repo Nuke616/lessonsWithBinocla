@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Numbers {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        String BinoclaMoney = "сто один";
+        String BinoclaMoney = "сто миллиард один";
         String[] arr = BinoclaMoney.split(" ");
         int  number2 =0;
         int total =0;
@@ -43,6 +43,9 @@ public class Numbers {
                 case "сто":
                     number2 = 100;
                   break;
+                case "миллиард":
+                    number2 = 1000000000;
+                    break;
             }
             total = total+number2;
         }

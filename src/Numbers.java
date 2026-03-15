@@ -6,7 +6,7 @@ public class Numbers {
         Scanner scan = new Scanner(System.in);
         String BinoclaMoney = "сто миллиард один";
         String[] arr = BinoclaMoney.split(" ");
-        int  number2 =0;
+        int number2 =0;
         int total =0;
         for (String i : arr){
             switch (i) {

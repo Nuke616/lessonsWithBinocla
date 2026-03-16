@@ -7,7 +7,7 @@ public class Numbers {
         String BinoclaMoney = "сто миллиард один";
         String[] arr = BinoclaMoney.split(" ");
         int number2 =0;
-        int total =0;
+        long total =0;
         for (String i : arr){
             switch (i) {
                 case "один":
@@ -47,7 +47,7 @@ public class Numbers {
                     number2 = 1000000000;
                     break;
             }
-            total = total+number2;
+            total = total-number2;
         }
         System.out.println(total);
     }

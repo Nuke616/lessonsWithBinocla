@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Numbers {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        //Scanner scan = new Scanner(System.in);
         String BinoclaMoney = "сто миллиард один";
         String[] arr = BinoclaMoney.split(" ");
         int number2 =0;

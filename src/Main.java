@@ -11,8 +11,7 @@ public class Main {
             String input = scanner.nextLine();
             String[] words = input.split(" ");
             if (words.length == 6 &&
-                    //!words[0].startsWith(" ") && //!words[0].endsWith(" ")
-                    //&&
+                   // !words[0].startsWith(" ") && !words[0].endsWith(" ") &&
                     words[1].equals("says") &&
                     words[2].equals("that") &&
                     words[3].equals("Binocla") &&

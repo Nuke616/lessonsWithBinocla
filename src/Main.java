@@ -24,11 +24,11 @@ public class Main {
                 System.out.println(summa);
             }
              else if (words.length == 5 &&
-                    words[1].equals("says") &&
-                    words[2].equals("that") &&
-                    words[3].equals("Binocla") &&
-                    words[4].equals("loves") &&
-                    words[5].equals("you!")) {
+                    words[0].equals("says") &&
+                    words[1].equals("that") &&
+                    words[2].equals("Binocla") &&
+                    words[3].equals("loves") &&
+                    words[4].equals("you!")) {
                 int summa = 0;
                 for (int i = 0; i < input.length(); i++) {
                     summa += input.charAt(i);

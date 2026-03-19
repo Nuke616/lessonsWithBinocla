@@ -9,7 +9,6 @@ public class Numbers {
         int number = 0;
         long total = 0;
         boolean plusOrMinus = false;
-
         for (String i : arr) {
             switch (i) {
                 case "один": number = number + 1; break;

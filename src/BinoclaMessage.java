@@ -44,47 +44,97 @@ import org.w3c.dom.ls.LSOutput;
 import java.util.Scanner;
 
 public class BinoclaMessage {
-    private static String text;
-    private static String author;
+    private  String text=new String();
+    private  String author =new String();
 
-    private static void printMessage() {
-        System.out.println(author + ':' + ' ' + text);
+    private  void setAuthor(String author){
+        if (author == null || author.isEmpty()){
+            System.out.println("Нельзя такое делать!!!!");
+        }
+        else {
+            this.author = author;
+        }
+    }
+    private  void setText(String text){
+        if (text == null || text.isEmpty()){
+            System.out.println("Нельзя такое делать!!!!");
+        }
+        else {
+            this.text = text;
+        }
 
 
+    }
+    String getAuthor(){
+return author;
+    }
+            String getText(){
+        return text;
+            }
+
+
+    private  void printMessage() {
+        System.out.println(getAuthor()+" "+getText());
+
+    }
+    private  int getTextLength(){
+        return (author+" "+text).length();
+    }
+
+   private  boolean containsWord(String word){
+        return (author+" "+text).contains(word);
     }
 
     public static void main(String[] args) {
          String pult = "";
+        BinoclaMessage SeregaHi = new BinoclaMessage();
         do {
             Scanner scan = new Scanner(System.in);
             System.out.println("Поиграем в игру ? Да/Нет");
             pult=scan.nextLine().toLowerCase();
-            try {
-                Integer.parseInt(pult);
-                throw new IllegalArgumentException("у тебя там число досвидули. Или введи имя");
-            } catch (NumberFormatException e) {
+            if(!pult.equals("да")){
+                System.out.println("пока");
+                break;
             }
             System.out.println("Заполните поле: author");
-            author = scan.nextLine();
-            try {
-                Integer.parseInt(author);
-                throw new IllegalArgumentException("у тебя там число досвидули. Или введи имя");
-            } catch (NumberFormatException e) {
-            }
-            System.out.println("Заполните поле: text");
-            text = scan.nextLine();
-            try {
-                Integer.parseInt(text);
-                throw new IllegalArgumentException("у тебя там число досвидули. Или введи имя");
-            } catch (NumberFormatException e) {
-            }
-            printMessage();
+            SeregaHi.setAuthor(scan.nextLine());
 
+            System.out.println("Заполните поле: text");
+            SeregaHi.setText(scan.nextLine());
+
+            SeregaHi.printMessage();
+            System.out.println("Проверить длину текста ?");
+            pult=scan.nextLine();
+            if(!pult.equals("да")){
+                System.out.println("ну и ладно");
+
+            }
+            else {
+                System.out.println("Длина слова:" + SeregaHi.getTextLength());
+
+            }
+            System.out.println("Проверим, содержится ли твое слово ?");
+            pult= scan.nextLine();
+
+            if(!pult.equals("да")){
+                System.out.println("ну и ладно");
+
+            }
+            else {
+                System.out.println("Тогда введи слово");
+                pult= scan.nextLine();
+                if(SeregaHi.containsWord(pult)){
+                    System.out.println("Рил содержится");
+                }
+                else {
+                    System.out.println("Нету искомого слова");
+                }
+
+            }
 
         }
 
-
-        while (pult != "нет");
+        while (!pult.equals("нет"));
     }
 }
 

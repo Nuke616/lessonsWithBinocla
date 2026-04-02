@@ -22,6 +22,7 @@ public class Lesson4 {
             finalString= mainString[i].substring(0,1).toUpperCase().concat(mainString[i].substring(1).replace(":",": "));
             System.out.println(finalString);
 
+
         }
 
 

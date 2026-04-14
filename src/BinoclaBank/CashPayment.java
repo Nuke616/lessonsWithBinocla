@@ -7,6 +7,9 @@ public class CashPayment extends Payment implements Refundable {
 
     @Override
     public void process() {
+        // if (1 -> 2 -> 3)
+        // "   " <- blank
+        // "" <- blank
         if (getId() == null || getId().contains(" ")) {
             System.out.println("id содержит пробелы или содержит null");
         }

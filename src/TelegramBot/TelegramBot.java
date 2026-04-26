@@ -57,6 +57,7 @@ public class  TelegramBot  {
                     String reminderPart = input1.substring(7).trim();
                     String[] parts = reminderPart.split(":", 2);
 
+
                 }
                 System.out.println("через сколько ты хочешь чтобы тебе напомнили это\\n " +
                                 "Допустимый формат:\\n" +

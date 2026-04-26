@@ -56,7 +56,7 @@ public class  TelegramBot  {
                 if (input1.contains("/remind")){
                     String reminderPart = input1.substring(7).trim();
                     String[] parts = reminderPart.split(":", 2);
-                    if ()
+
                 }
                 System.out.println("через сколько ты хочешь чтобы тебе напомнили это\\n " +
                                 "Допустимый формат:\\n" +
@@ -70,6 +70,7 @@ public class  TelegramBot  {
                     currentDuration = localDate.plusDays(num);
 
                 }
+
                 if (localDate.isAfter(currentDuration)){
                     System.out.println(reminders.get(0));
                 }

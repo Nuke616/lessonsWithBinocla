@@ -151,7 +151,7 @@ public class  TelegramBot {
                     if (!duration.contains("s")||!duration.contains("m")|| !duration.contains("d")){
                         System.out.println("ты ввел неправильный формат");
                     }
-                    if (duration.contains("d")) {
+                    if (duration.contains("h")) {
                         try {
                             num = Integer.parseInt(parts[1].substring(0,duration.length() -1));
                         } catch (NumberFormatException e) {
@@ -159,15 +159,11 @@ public class  TelegramBot {
                            continue;
 
                         }
-                        currentDuration = LocalDateTime.now().plusDays(num);
+                        currentDuration = LocalDateTime.now().plusHours(num);
                         reminderPart =parts[0]+" |";
                         reminders.add(new Reminder(reminderPart,currentDuration));
                         System.out.println("Успешно добавлено ваше напоминание \n" +
                                 reminderPart + " "+currentDuration.format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss"))+"\n");
-
-
-
-
                     }
                     if (duration.contains("m")) {
                         try {
